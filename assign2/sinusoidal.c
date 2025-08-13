@@ -1,4 +1,3 @@
-#define _USE_MATH_DEFINESS
 #include <stdio.h>
 #include <math.h>
 
