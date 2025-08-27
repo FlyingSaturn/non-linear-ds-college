@@ -12,8 +12,8 @@ int main(void)
     char d;
     printf("Digit to remove: ");
     scanf(" %c", &d);
-    int index = -1;
-    for (int i = 0, l = strlen(n); i < l; i++)
+    int index = -1, l = strlen(n);
+    for (int i = 0; i < l; i++)
     {
         if (n[i] == d)
         {
@@ -24,7 +24,7 @@ int main(void)
                 break;
         }
     }
-    for (int i = index, l = strlen(n); i < l && i >= 0; i++)
+    for (int i = index; i < l && i >= 0; i++)
         n[i] = n[i + 1]; // '\0' also shifts to the left
     printf("Result: %s\n", n);
 }

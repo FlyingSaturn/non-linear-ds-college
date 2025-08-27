@@ -11,7 +11,7 @@ int cycles = 1;
 int main(void)
 {
 	double amp;
-	const int steps = 30;
+	const int steps = 10;
 	int cycl;
 	printf("A: ");
 	scanf("%lf", &amp);

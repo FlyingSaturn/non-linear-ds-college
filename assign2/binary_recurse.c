@@ -15,17 +15,11 @@ int main(void)
     printf("No. to search: ");
     scanf("%d", &s);
 
-    int d, op = -1;
-    while (!(op >= 1 && op <= 3))
-    {
-        printf("How do you want your results?\n1. Recursion\n2. Iteration\n3. Both\nEnter your choice: ");
-        scanf("%d", &op);
-        d = binary_recurse(a, s, 0, n - 1);
-        if (d == -1)
-            printf("Number not found.\n");
-        else
-            printf("Number found! Position: %d\n", d);
-    }
+    int d = binary_recurse(a, s, 0, n - 1);
+    if (d == -1)
+        printf("Number not found.\n");
+    else
+        printf("Number found! Position: %d\n", d);
 }
 
 
