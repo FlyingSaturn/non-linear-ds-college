@@ -1,6 +1,14 @@
 #include <stdio.h>
 int main(void)
 {
+	double s;
+	printf("Threshold sparsity s: ");
+	scanf("%lf", &s);
+	if (s >= 1)
+	{
+		printf("Threshold impossible to achieve.\n");
+		return 0;
+	}
     int m, n;
     printf("m: ");
     scanf("%d", &m);
@@ -17,9 +25,8 @@ int main(void)
             if (a[i][j] == 0)
                 k++;
     double sparsity = k * 1.0 / (m * n);
-    if (sparsity > 0.8)
+    if (sparsity > s)
         printf("It is a sparse matrix\n");
     else
         printf("It is not a sparse matrix.\n");
 }
-
