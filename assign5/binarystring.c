@@ -30,7 +30,7 @@ int binarysearch(int high, int low, char arr[][100], char* target)
 {
 	if (low > high)
 		return -1;
-	int p = (high + low) / 2;
+	int p = low + (high - low) / 2;
 	if (strcasecmp(target, arr[p]) == 0)
 	        return p;
 	if (strcasecmp(target, arr[p]) < 0)
