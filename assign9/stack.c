@@ -33,10 +33,16 @@ int main()
 					pop();
 				break;
 			case 3:
-				peek();
+				if (!underflow())
+					printf("Top Element: %d\n", peek());
+				else
+					printf("Stack underflow.\n");
 				break;
 			case 4:
-				display();
+				if (underflow())
+					printf("Nothing.\n");
+				else
+					display();
 				break;
 			case 5:
 				printf("Exitting...\n");
@@ -75,14 +81,11 @@ int pop()
 
 int peek()
 {
-	printf("Top element: %d\n", n[top]);
+	return n[top];
 }
 
 void display()
 {
-	if (underflow())
-		printf("Nothing.\n");
-		return;
 	printf("The values are: \n");
 	for (int i = top; i >= 0; i--)
 		printf("%d\n", n[i]);
