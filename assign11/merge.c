@@ -32,10 +32,10 @@ int main(void)
 
 void mergesort(int A[], int low, int high)
 {
-        printf("low = %d, high = %d\n", low, high);
         if (low >= high)
                 return;
         int mid = (low + high) / 2;
+        printf("left = %d-%d, right = %d-%d\n", low, mid, mid+1,high);
         mergesort(A, low, mid);
         mergesort(A, mid+1, high);
         merge(A, low, high);

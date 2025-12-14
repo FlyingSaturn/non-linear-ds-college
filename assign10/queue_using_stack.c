@@ -70,9 +70,12 @@ void enqueue(int d)
 
 int dequeue()
 {
-	while (top1 > -1)
-		arr2[++top2] = arr1[top1--];
-	int d = arr2[top2--];
+	if (top2 == -1)
+	{
+		while (top1 > -1)
+			arr2[++top2] = arr1[top1--];
+		int d = arr2[top2--];
+	}
 	return d;
 }
 
