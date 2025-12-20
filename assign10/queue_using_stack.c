@@ -22,7 +22,7 @@ int main(void)
 	int op, d;
 	while (true)
 	{
-		printf("Enter the options:\n1. Enqueue\n2. Dequeue\n3. Peek\n4.  Exit\nChoice: ");
+		printf("Enter the options:\n1. Enqueue\n2. Dequeue\n3. Peek\n4. Exit\nChoice: ");
 		scanf("%d", &op);
 		switch (op)
 		{
@@ -70,11 +70,12 @@ void enqueue(int d)
 
 int dequeue()
 {
+	int d;
 	if (top2 == -1)
 	{
 		while (top1 > -1)
 			arr2[++top2] = arr1[top1--];
-		int d = arr2[top2--];
+		d = arr2[top2--];
 	}
 	return d;
 }
